@@ -1,0 +1,38 @@
+
+struct node {
+    int val
+    struct node* next;
+}
+
+
+3 -> 5 -> 6 -> X
+
+3 <- 5 <- 6 <- X
+
+
+1/
+// highly recommend
+// reverse a linked list (so common)
+// draw a diagram with pointers 
+
+/*
+ * reverses the list pointed to by the head variable
+ * so that the first node is the last, the last node is the first.
+ * returns a pointer to the new head of the list
+ * (this should be the last element of the original list).
+ * Note: you should *not* create any new nodes or modify
+ * the values in any nodes.
+ * Your implementation should *only* change the next pointers
+ * in each node.
+ */
+struct node* list_reverse(struct node* head);
+
+
+2/
+// implement each function recursively
+// (recursively means no for/while loops)
+// the function prototypes/definitions should remain the same
+
+3/ (challenge)
+// reverse a linked list recursively
+// (actually easier than using loops if you do it in a clever way)
