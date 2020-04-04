@@ -1,0 +1,97 @@
+ In this problem we are interested in finding the median of a set of distinct
+ integers stored in two AVL trees. You cannot assume anything about how the
+ integers are distributed between the two trees
+ (e.g. one might contain n − 1 elements and the other only 1).
+ In addition to the standard pointers to the parent and two children,
+ and the integer itself, each node of the trees also stores the size of the
+ subtree rooted at it.
+
+    AVL Tree - a self balancing binary tree.
+    when you do insertions, deletions, the tree will do rotations to self balance.
+
+    details not super important for this task, what is important is knowing:
+    Lookup, insertion, and deletion all take O(log n)
+    time in both the average and worst cases,
+    where n is the number of nodes in the tree prior to the operation.
+
+    Insertions and deletions may require the tree to be rebalanced
+    by one or more tree rotations.
+
+    101 elements - they can be distributed in either tree.
+    50 elements are 1
+    1 elements are 2
+    50 elements are 3
+    AVL_tree_a has 91 -> left might have 45, right might have 50, and root is 1 for 91 total
+    AVL_tree_b has 10 -> median in this tree
+    algorithm needs to return 2
+
+
+
+Your task is to design an algorithm that takes these two trees as input and
+returns the median of the elements stored in them.
+For full marks your algorithm needs to run in O(log n) time.
+
+
+    every operation in an AVL tree is O(log n). For the total algorithm so be O(log n)
+    it means you can do any operations (insert, delete, lookup)
+     as many times as you like, as long as the number of times you do them is constant
+      no matter how big or small n is.
+
+    log n + log n + ... + log n + log n = O(log n)
+
+       e.g. find the range of elements in O(log n)
+        right traverse both trees to the leaf
+            AVL_tree_a -> max value in this tree + logn
+            AVL_tree_b -> max value in this tree + logn
+        left traverse both trees to the leaf
+            AVL_tree_b -> min value in this tree + logn
+            AVL_tree_b -> min value in this tree + logn
+        logn + logn + logn + logn = O(log n)
+            range [1, 3]
+        notice how no matter how large the trees are,
+        these 4 operations can always be done in 4 tree traversals.
+        and so the sum of these is O(log n)
+
+
+
+    50 inserts and 30 lookups and 40 deletions
+
+    2 AVL trees that contained 2 elements -> n == 2
+    50 * logn + 30 * logn + 40 * logn = 120 log n + 400 => O(log n)
+
+    when n gets very large
+    n ^ 2 + 60 n + 300 will start to look like n^2
+
+    2 AVL trees that contained 5000 elements -> n == 5000
+    50 * logn + 30 * logn + 40 * logn + 400 = 120 log n + 400 => O(log n)
+
+
+    n = 1000
+    50 * logn + 30 * logn + 40 * logn + 400 = 120 log n + 400 => O(log n)
+    n = 2000 = 2 * 1000
+    2 * (50 * logn + 30 * logn + 40 * logn + 400) = 2 * 120 log n + 400 => O(n log n)
+    so the constants changed based on the value of n, so it is no longer a O(log n)
+    so it is O(n log n)
+
+
+
+
+
+
+
+    Big O order
+
+        log log n
+
+        log n
+
+        n ^ 2 + 60 n + 300 = O( n ^ 2 )
+
+        2 ^ n
+
+        n!
+
+
+
+
+

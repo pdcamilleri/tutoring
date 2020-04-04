@@ -1,0 +1,62 @@
+0) Show that PickLargestSizeGame doesn’t always return the correct
+solution by giving a counterexample
+
+    1)
+        games sorted by size
+        game     - size - "fun"
+        monopoly - 31cm - 3/10
+        cluedo   - 30cm - 6/10
+        snap     - 15cm - 5/10
+        hearts   - 10cm - 4/10
+        size of our shelf is 31cm
+
+    2)
+        PickLargestSizeGame would pick monopoly with a total fun value of 3.
+        this would then fill up the shelf as only 1cm remaining, and all
+        games are larger than 1cm
+
+    3)
+        A better solution exists where you pick cluedo for fun value of 6.
+
+example 2
+
+    1)
+        games sorted by size
+        game     - size - "fun"
+        monopoly - 16cm - 3/10
+        cluedo   - 15cm - 3/10
+        snap     - 14cm - 3/10
+        hearts   - 13cm - 3/10
+        spades   - 3cm -  1/10
+        size of our shelf is 31cm
+
+    2)
+        PickLargestSizeGame would pick monopoly + cluedo with total fun 6
+
+    3)
+        picking snap, hearts and spades has total fun value 7
+
+
+a) Show that PickLargestFun doesn’t always return the correct solution by giving a
+counterexample
+
+    to disprove something, produce a counter example. just a situation with
+    exact values that is not optimial.
+
+    1) describe the example situation
+    2) show the solution that the algorithm will give
+    3) show that there is an alternate solution that will give a better result
+       (note: you dont need to provide an algorithm for this better solution.
+              you only need to show that a better solution exists)
+
+
+b) Argue whether PickLargestRatio always returns the correct solution by ei-
+ther arguing its correctness (if you think it’s correct) or by providing a coun-
+terexample (if you think it’s incorrect).
+
+    same here. first, try to find some counter examples.
+
+    if you try several counter examples and *cannot* come up with an example that shows
+    it is wrong, then try to think what is preventing you from reaching a counter example.
+    this will probably be the reason why the algorithm is correct.
+
