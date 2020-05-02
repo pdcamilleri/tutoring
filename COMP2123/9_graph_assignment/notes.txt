@@ -1,0 +1,75 @@
+
+
+
+Problem 1
+
+     0             1             2             3           4            5       .....
+-----------|-------------|-------------|-----------|------------|-------- t
+
+
+wi(order number)            di = deadline
+1 ----------- d4, ti = 1
+4 ----------- d5, ti = 1
+2 -------------------------- d7, ti = 2
+5 -------------------------- t3
+3 ---------------------------------------- d6, ti = 3
+
+
+
+ti is the length of the line
+
+a)
+ come up with a specific set of orders.
+ show that the shortFirst algorithm produces a failed schedule
+ show that a feasible schedule exists (You dont need to show this with an algorithm, just show the answer)
+
+
+b)
+
+5 -------------------------- d3, ti = 2
+1 ----------- d4, ti = 1
+4 ----------- d5, ti = 1
+3 ---------------------------------------- d6, ti = 3
+2 -------------------------- d7, ti = 2
+
+
+
+Problem 2. You are given a simple undirected weighted graph G = (V, E), a set of vertices X ⊂ V, and two vertices s, t ∈ V \ X.
+ All weights are non-negative and you can assume that it takes O(1) time to determine if a vertex is in X.
+Your task is to design an algorithm that computes a shortest path between s and t in G, such that this path includes at
+most one vertex of the set X, if such a path exists.
+For full marks your algorithm needs to run in O(m + n log n) time.
+
+For full marks your algorithm needs to run in O(v + e log e) time.
+O(v^2 + e^2)
+
+a) Design an algorithm that solves the problem.
+b) Briefly argue the correctness of your algorithm.
+c) Analyse the running
+time of your algorithm.
+
+
+
+A B C D ..... X Y Z (entire graph set of nodes)
+A B C D ..... M (subset of nodes nodes)
+
+s = S
+t = T
+
+find a path from S to T that only used one node from A ... M
+
+
+shortest path, thinking of  
+djikstra's ->
+BFS ->
+
+
+
+Question 3
+
+ We are given a simple undirected graph of maximum degree d and d + 1 different tokens
+ (assume an infinity number of each token, so you don’t need to worry about running out of tokens.
+
+ maximum degree + 1
+
+
